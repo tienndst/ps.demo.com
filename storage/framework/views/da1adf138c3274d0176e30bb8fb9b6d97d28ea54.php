@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Phụng sự - <?php echo $__env->yieldContent('title'); ?></title>
-    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/ps-style.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Phụng sự - <?php echo $__env->yieldContent('title'); ?></title>
+  <link type="text/css" href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link type="text/css" href="public/css/ps-style.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="public/vendor/jquery/jquery.min.js"></script>
-    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<script  src="public/js/index.js"></script>
 	<script  src="public/js/ps-js.js"></script>
   <body>

@@ -161,11 +161,6 @@
 			@endif
 			<!-- END .content-block-single -->
 			</div>
-
-			<!-- BEGIN .sidebar -->
-			<aside class="sidebar sticky_column">
-				@include('home.sitebar_right')
-			<!-- END .sidebar -->
 			</aside>
 		</div>
 		

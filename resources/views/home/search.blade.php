@@ -21,7 +21,7 @@
 				@endif
 				</div>				
 					<div class="row">						
-						<div class="col-md-8">
+						<div class="col-md-12">
 							<div class=" article-list">
 							<div class="widget">
 								{{-- {{dd($news_serch->count())}} --}}
@@ -60,19 +60,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="row">
-							<div class="col-md-12" style="min-height: 200px;">
-								@if($adverts_center[0]->code != "")
-									{{$adverts_center[0]->code}}
-								@else
-								<a href="{{$adverts_center[0]->link}}" target="_blank">
-									<img src="{{url('public/img/images_bn/'.$adverts_center[0]->img)}}" alt="No image" width="100%" style="object-fit: contain;" />
-								</a>
-								@endif
-							</div>
-						</div>
-					</div>
+
 				</div>						
 			<!-- END .content-panel -->
 			</div>
@@ -80,9 +68,6 @@
 		<!-- END .content-block-single -->
 		</div>
 
-		<!-- BEGIN .sidebar -->
-			<aside class="sidebar sticky_column">
-			<!-- END .sidebar -->
 	</div>
 	
 

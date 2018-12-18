@@ -20,7 +20,7 @@
 				<?php endif; ?>
 				</div>				
 					<div class="row">						
-						<div class="col-md-8">
+						<div class="col-md-12">
 							<div class=" article-list">
 							<div class="widget">
 								
@@ -62,20 +62,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="row">
-							<div class="col-md-12" style="min-height: 200px;">
-								<?php if($adverts_center[0]->code != ""): ?>
-									<?php echo e($adverts_center[0]->code); ?>
 
-								<?php else: ?>
-								<a href="<?php echo e($adverts_center[0]->link); ?>" target="_blank">
-									<img src="<?php echo e(url('public/img/images_bn/'.$adverts_center[0]->img)); ?>" alt="No image" width="100%" style="object-fit: contain;" />
-								</a>
-								<?php endif; ?>
-							</div>
-						</div>
-					</div>
 				</div>						
 			<!-- END .content-panel -->
 			</div>
@@ -83,9 +70,6 @@
 		<!-- END .content-block-single -->
 		</div>
 
-		<!-- BEGIN .sidebar -->
-			<aside class="sidebar sticky_column">
-			<!-- END .sidebar -->
 	</div>
 	
 

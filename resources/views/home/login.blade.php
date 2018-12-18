@@ -47,7 +47,9 @@
 							<br/>
 							<div class="form-group ">				
 									<button type="submit" name="nn-login-sm" id="nn-submit" tabindex="5" class="btn btn-lg btn-primary">Đăng nhập</button>
+									<br>
 									<p>Hoặc</p>
+									<br>
 									<a href="/register" class="btn btn-lg btn-primary>Đăng ký</a>
 							</div>
 						</form>	
