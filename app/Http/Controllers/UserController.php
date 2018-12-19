@@ -18,7 +18,7 @@ class UserController extends Controller
 
     public function GetLogoutAdmin(){
         Auth::logout();
-        return redirect('login');
+        return redirect('/');
     }
     public function GetLoginAdmin(){
         if (Auth::check()) {

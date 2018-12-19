@@ -54,7 +54,7 @@
                                         <td class="center">
                                             <img src="{{ asset('public/img/news/100x100/'.$new->newimg) }}" style="width: 55px"> 
                                         </td>
-                                        <td class="center info">Nguyễn Nam</td>                                        
+                                        <td class="center info">Admin</td>                                        
                                         <td>
                                             <i class="nneditnew btn btn-info fa fa-edit" id="ennnew{{ $new->id }}"  
                                             idlistnew="{{ $new->idlistnew }}" 

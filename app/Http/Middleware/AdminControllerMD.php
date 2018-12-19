@@ -20,7 +20,7 @@ class AdminControllerMD
             $user = Auth::user();         
             return $next($request);
         }else
-            return redirect('auth/login');
+            return redirect('/login');
         
     }
 }

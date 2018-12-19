@@ -70,34 +70,9 @@
 			<header class="header">	
 				<!-- BEGIN .top-menu -->
 				<div class="top-menu">
-				
-					<!-- BEGIN .wrapper -->
-					<div class="wrapper">
-						<nav class="top-menu-soc right">
-						</nav>
-						<nav class="top-menu-list">
-							<ul class="load-responsive" rel="Top Menu">
-								<li><a href="{{url('')}}"><img src="{{url('public/home/'.$contact->logo)}}" alt="No logo" style="height: 25px"></a></li>
-								<li>
-									<div class="header-main-search">
-										<div class="search-block">
-											<form action="{{ url('/search') }}">
-												<input type="text" name="key" placeholder="Nhập từ khóa tìm kiếm.." />
-											</form>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</nav>
-
-					<!-- END .wrapper -->
-					</div>
-
-				<!-- END .top-menu -->
 				</div>		
 				<!-- BEGIN .wrapper -->
 				<div class="wrapper">
-
 					<!-- BEGIN .header-main -->
 					<div class="header-main">
 						<style type="text/css" media="screen">
@@ -118,19 +93,31 @@
 						<div class="header-main-logo">
 							<a href="{{url('')}}"><img src="{{ url('/public/logo_zing_trithuc.png')}}" alt="No logo" /></a>
 						</div>
-
-						<div class="header-main-weather">
+						<ul class="load-responsive" rel="Top Menu">
+							<li>
+								<div class="header-main-search">
+									<div class="search-block">
+										<form action="{{ url('/search') }}">
+											<input type="text" name="key" placeholder="Nhập từ khóa tìm kiếm.." />
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="load-responsive header-main-weather">
 							<div class="weather-block">
 								<i class="wi wi-day-lightning"></i>
-								<strong>Buôn Mê Thuột, Đắk Lắk</strong>
+								<strong>Hà Nội</strong>
 								<span>+29&deg;C, Mưa dông</span>
 							</div>
 						</div>
+						<ul class="admin-panel visible-lg visible-md float-right">
+							<li><a href="/admin" class="btn btn-xs">Hệ thống</a></li>
+							<li><a href="/register" class="btn btn-xs">Đăng nhập</a></li>
+						</ul>
 
 					<!-- END .header-main -->
 					</div>
-					
-
 					<nav class="main-menu">
 						<a href="#dat-menu" class="dat-menu-button"><i class="fa fa-bars"></i>MENU</a>
 						<div class="main-menu-placeholder">
@@ -180,7 +167,7 @@
 			<!-- END .footer -->
 			</footer>
 			<div class="back_top" style="display: none;">
-				<a href="#top" class="right" style="color: #fff;"><i class="fa fa-chevron-up"></i><strong></strong></a>
+				<a href="#top" class="right" style="color: #fff;"><i class="glyphicon glyphicon-arrow-up"></i><strong></strong></a>
 			</div>			
 		<!-- END .boxed -->
 		</div>
