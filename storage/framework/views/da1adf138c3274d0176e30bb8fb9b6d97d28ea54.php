@@ -3,38 +3,38 @@
 <html lang = "vi">
 	<!-- BEGIN head -->
 	<head>
-		<title>@yield('title')</title> 
+		<title><?php echo $__env->yieldContent('title'); ?></title> 
 		<!-- Meta Tags -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="description" content="" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 		<meta name="generator" content="nt7solution.com">
-	    <meta property="fb:app_id" content="{{ (!empty($contact)?$contact->fb_app_id:"") }}" /> 
+	    <meta property="fb:app_id" content="<?php echo e((!empty($contact)?$contact->fb_app_id:"")); ?>" /> 
 	    <meta property="og:type" content="article" /> 
-	    <meta property="og:title" content="@yield('title')" />
-	    <meta property="og:image" content="@yield('seo_image')" >
-	    <meta property="og:description" content="@yield('seo_description')" >
-	    <meta property="og:url" content="@yield('seo_url')" />
-	    <meta property="og:site_name" content="{{ (!empty($contact)?$contact->seo_title:"") }}" />
+	    <meta property="og:title" content="<?php echo $__env->yieldContent('title'); ?>" />
+	    <meta property="og:image" content="<?php echo $__env->yieldContent('seo_image'); ?>" >
+	    <meta property="og:description" content="<?php echo $__env->yieldContent('seo_description'); ?>" >
+	    <meta property="og:url" content="<?php echo $__env->yieldContent('seo_url'); ?>" />
+	    <meta property="og:site_name" content="<?php echo e((!empty($contact)?$contact->seo_title:"")); ?>" />
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="{{url('public/home/images/favicon.png')}}" type="image/x-icon" />
+		<link rel="shortcut icon" href="<?php echo e(url('public/home/images/favicon.png')); ?>" type="image/x-icon" />
 
 		<!-- Stylesheets -->
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/reset.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/font-awesome.min.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/weather-icons.min.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/ps-style.css')}}" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/reset.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/font-awesome.min.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/weather-icons.min.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/ps-style.css')); ?>" />
 		<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/bootstrap.min.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/dat-menu.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/main-stylesheet.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/ot-lightbox.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/shortcodes.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/responsive.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/mystyle.css')}}" />
-		<link type="text/css" rel="stylesheet" href="{{url('public/home/css/demo-settings.css')}}" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/bootstrap.min.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/dat-menu.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/main-stylesheet.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/ot-lightbox.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/shortcodes.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/responsive.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/mystyle.css')); ?>" />
+		<link type="text/css" rel="stylesheet" href="<?php echo e(url('public/home/css/demo-settings.css')); ?>" />
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,11 +73,11 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>                        
 						</button>
-						<a href="{{url('')}}"><img src="{{ url('/public/logo_zing_trithuc.png')}}" alt="No logo" /></a>
+						<a href="<?php echo e(url('')); ?>"><img src="<?php echo e(url('/public/logo_zing_trithuc.png')); ?>" alt="No logo" /></a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="myNavbar">
-						<form class="navbar-form navbar-left" action="{{ url('/search') }}">
+						<form class="navbar-form navbar-left" action="<?php echo e(url('/search')); ?>">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Tìm kiếm" name="key">
 									<div class="input-group-btn">
@@ -144,7 +144,7 @@
 			
 			<!-- BEGIN .content -->
 			<section class="content">
-			@yield('content')				
+			<?php echo $__env->yieldContent('content'); ?>				
 			<!-- BEGIN .content -->
 			</section>
 			
@@ -154,8 +154,8 @@
 				<div class="footer-copyright">
 					<!-- BEGIN .wrapper -->
 					<div class="wrapper">
-						<p>{!! $contact->slogan_intro !!}</p>					
-						<p>&copy; Copyright <strong>{{$contact->nameco}}</strong> <?php echo date("Y"); ?>, <strong><a href="https://nt7solution.com/" target="_blank">{{$contact->website}}</a></strong></p>
+						<p><?php echo $contact->slogan_intro; ?></p>					
+						<p>&copy; Copyright <strong><?php echo e($contact->nameco); ?></strong> <?php echo date("Y"); ?>, <strong><a href="https://nt7solution.com/" target="_blank"><?php echo e($contact->website); ?></a></strong></p>
 					
 					<!-- END .wrapper -->
 					</div>
@@ -171,14 +171,14 @@
 		</div>
 	
 		<!-- Scripts -->
-		<script type="text/javascript" src="{{url('public/home/jscript/jquery-latest.min.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/bootstrap.min.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/modernizr.custom.50878.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/iscroll.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/dat-menu.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/theme-scripts.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/home/jscript/ot-lightbox.js')}}"></script>
-		<script type="text/javascript" src="{{url('public/js/jquery.sticky-kit.min.js')}}"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/jquery-latest.min.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/bootstrap.min.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/modernizr.custom.50878.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/iscroll.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/dat-menu.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/theme-scripts.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/home/jscript/ot-lightbox.js')); ?>"></script>
+		<script type="text/javascript" src="<?php echo e(url('public/js/jquery.sticky-kit.min.js')); ?>"></script>
 	<!-- END body -->
 	<script>
 		if ($(window).width() >700) {

@@ -214,16 +214,16 @@ p:last-child {
 .top-menu-list{
 	/* background-color: #00918e; */
 }
-
-
+.glyphicon {
+	top:-5px;
+}
+.wrapper .wheather{
+	padding-top: 10px;
+	margin-left: 10px;
+}
 /*------------------------------------------------------------------
 [1. Main header]
-
 + .header
-	+ .top-menu
-		+ .wrapper
-			+ .top-menu-soc
-			+ .top-menu-list
 	+ .wrapper
 		+ .header-main
 
@@ -280,6 +280,7 @@ p:last-child {
 	width: 100%;
 }
 
+
 .header-main-search .search-block input {
 	width: 100%;
 	position: relative;
@@ -304,8 +305,9 @@ p:last-child {
 .header-main-weather .weather-block {
 	display: block;
 	position: relative;
-	padding-left: 66px;
+	padding-left: 50px;
 	font-size: 14px;
+	margin-top: -5px;
 }
 
 .header-main-weather .weather-block .wi {
@@ -327,88 +329,6 @@ p:last-child {
 	margin-right: 10px;
 	padding-top: 6px;
 }
-.top-menu {
-	display: block;
-	border-bottom: 1px solid #e8e8e8;
-	z-index: 1001;
-	position: relative;
-}
-
-.top-menu ul:after,
-.top-menu .wrapper:after {
-	display: block;
-	clear: both;
-	content: '';
-}
-
-.top-menu ul {
-	display: block;
-	margin-bottom: 0px;
-	border-left: 1px solid #f4f4f4;
-}
-
-.top-menu li {
-	display: block;
-	float: left;
-	border-right: 1px solid #f4f4f4;
-	font-size: 12px;
-}
-
-.top-menu li a {
-	display: block;
-	color: #8c8c8c;
-	padding: 10px 19px;
-}
-
-.top-menu li a span:after {
-	display: inline-block;
-	font-family: "FontAwesome";
-	content: '\f0d7';
-	padding-left: 6px;
-	font-size: 0.8em;
-}
-
-.top-menu li:hover > a {
-	background-color: #f4f4f4;
-}
-
-.top-menu ul.sub-menu {
-	display: none;
-	background-color: #f4f4f4;
-	position: absolute;
-	width: 250px;
-	margin-left: -1px;
-	border-left: 0px;
-}
-
-.top-menu ul.sub-menu ul.sub-menu {
-	margin-left: 250px;
-	top: -1px;
-}
-
-.top-menu li:hover > ul.sub-menu {
-	display: block;
-}
-
-.top-menu ul.sub-menu li {
-	float: none;
-	border-top: 1px solid #e8e8e8;
-	border-right: 0px;
-	position: relative;
-}
-
-.top-menu ul.sub-menu a span:after {
-	position: absolute;
-	right: 13px;
-	content: '\f0da';
-}
-
-.top-menu ul.sub-menu li:hover > a {
-	background: #e8e8e8;
-}
-
-
-
 
 /*------------------------------------------------------------------
 [2. Main Menu]
@@ -427,7 +347,13 @@ p:last-child {
 	position: relative;
 	margin-bottom: 10px;
 }
-
+.header .main-menu .ads{
+	display: inline-block;
+	width: 49.8%;
+	height: 120px;
+	margin-bottom: 5px;
+	border: solid black 1px;
+}
 .main-menu-placeholder {
 	display: block;
 	position: relative;
