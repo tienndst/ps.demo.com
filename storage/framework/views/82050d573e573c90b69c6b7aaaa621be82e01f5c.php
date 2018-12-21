@@ -6,7 +6,6 @@
 <?php $__env->startSection('content'); ?>
 <!-- BEGIN .wrapper -->
 	<div class="wrapper">
-
 		<!-- BEGIN .ot-breaking-news-body -->
 		<div class="ot-breaking-news-body" data-breaking-timeout="4000" data-breaking-autostart="true">
 			<div class="ot-breaking-news-controls">
@@ -26,34 +25,34 @@
 		<!-- END .ot-breaking-news-body -->
 		</div>
 
-		<div class="content-block has-sidebar">
+		<div class="content-block">
 			<!-- BEGIN .content-block-single -->
 			<div class="content-block-single">
+
+				<div class="content-panel">
+					<div class="content-panel-title">						
+						<ul class="sub_menu">
+							<li class="active"><a href="#">Tin hot trong ngày</a></li>
+						</ul>
+					</div>
+				</div>
 			<?php $index_count = 0; $ads = 0;?>
 			<?php $__currentLoopData = $modnews; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index_mod): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>		
 				<!-- BEGIN .content-panel -->
 				<div class="content-panel">
-					<div class="content-panel-title">						
-						<ul class="sub_menu">
-							<li class="active"><a href="<?php echo e(url('loai-tin/'.$index_mod->slug)); ?>"><?php echo e($index_mod->modname); ?></a></li>
-							<?php $__currentLoopData = $index_mod->listnews; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $itemlist): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?> 
-							<li><a href="<?php echo e(url('/loai-tin/'.$itemlist->slug)); ?>" title="<?php echo e($itemlist->listname); ?>"><?php echo e($itemlist->listname); ?></a></li>
-							<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-						</ul>
-					</div>
 					<?php 
 						$item = $index_mod->news_in_mod($index_mod->id);
 						$hot = $item->shift();								
 					 ?>
 					<div class="row">
-						<div class="hidden-xs col-md-7 nopadding">
+						<div class="hidden-xs col-md-6 nopadding">
 							<div class="content-panel-body article-list">							
 								<div class="item" data-color-top-slider="#867eef">
 									<div class="item-header">
 										<a href="<?php echo e(url('chi-tiet/'.$hot['slug'])); ?>">
 											<span class="comment-tag"><i class="fa fa-comment-o"></i><span class="fb-comments-count" data-href="<?php echo e(url('chi-tiet/'.$hot['slug'])); ?>"></span><i></i></span>
 											<span class="read-more-wrapper"><span class="read-more">Đọc thêm +<i></i></span></span>
-											<img src="<?php echo e(url('public/img/news/300x300/'.$hot['newimg'])); ?>" alt="No image" />
+											<img width="300px" src="<?php echo e(url('public/img/news/300x300/'.$hot['newimg'])); ?>" alt="No image" />
 										</a>
 									</div>
 									<div class="item-content">
@@ -63,17 +62,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="hidden-xs col-md-5 nopadding">
-							<div class="content-panel-body article-list">
-								<ul>
-									<?php $__currentLoopData = $item; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $news): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-									<li>
-										<a href="<?php echo e(url('/chi-tiet/'.$news->slug)); ?>" title="<?php echo e($news->newsname); ?>"><b class="fa fa-angle-right" aria-hidden="true"></b> <b><?php echo e($news->newsname); ?></b> </a>
-									</li>
-									<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-								</ul>
+
+						<div class="hidden-xs col-md-6 nopadding">
+							<div class="content-panel-body article-list">							
+								<div class="item" data-color-top-slider="#867eef">
+									<div class="item-header">
+										<a href="<?php echo e(url('chi-tiet/'.$hot['slug'])); ?>">
+											<span class="comment-tag"><i class="fa fa-comment-o"></i><span class="fb-comments-count" data-href="<?php echo e(url('chi-tiet/'.$hot['slug'])); ?>"></span><i></i></span>
+											<span class="read-more-wrapper"><span class="read-more">Đọc thêm +<i></i></span></span>
+											<img width="300px" src="<?php echo e(url('public/img/news/300x300/'.$hot['newimg'])); ?>" alt="No image" />
+										</a>
+									</div>
+									<div class="item-content">
+										<h3><a href="<?php echo e(url('chi-tiet/'.$hot['slug'])); ?>"><?php echo e($hot['newsname']); ?></a></h3>
+										<p><?php echo $hot['newintro']; ?></p>	
+									</div>
+								</div>
 							</div>
 						</div>
+
 						<div class="visible-xs col-xs-12">
 							<div class="mobile_hot_img">
 								<a href="<?php echo e(url('/chi-tiet/'.$hot->slug)); ?>" title="<?php echo e($hot->newsname); ?>"><img class="img-responsive" src="<?php echo e(url('public/img/news/300x300/'.$hot['newimg'])); ?>" alt="<?php echo e($hot['newimg']); ?>"></a>

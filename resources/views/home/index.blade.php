@@ -7,7 +7,6 @@
 @section('content')
 <!-- BEGIN .wrapper -->
 	<div class="wrapper">
-
 		<!-- BEGIN .ot-breaking-news-body -->
 		<div class="ot-breaking-news-body" data-breaking-timeout="4000" data-breaking-autostart="true">
 			<div class="ot-breaking-news-controls">
@@ -27,34 +26,34 @@
 		<!-- END .ot-breaking-news-body -->
 		</div>
 
-		<div class="content-block has-sidebar">
+		<div class="content-block">
 			<!-- BEGIN .content-block-single -->
 			<div class="content-block-single">
+
+				<div class="content-panel">
+					<div class="content-panel-title">						
+						<ul class="sub_menu">
+							<li class="active"><a href="#">Tin hot trong ngày</a></li>
+						</ul>
+					</div>
+				</div>
 			<?php $index_count = 0; $ads = 0;?>
 			@foreach($modnews as $index_mod)		
 				<!-- BEGIN .content-panel -->
 				<div class="content-panel">
-					<div class="content-panel-title">						
-						<ul class="sub_menu">
-							<li class="active"><a href="{{ url('loai-tin/'.$index_mod->slug) }}">{{ $index_mod->modname }}</a></li>
-							@foreach($index_mod->listnews as $itemlist) 
-							<li><a href="{{url('/loai-tin/'.$itemlist->slug)}}" title="{{$itemlist->listname}}">{{$itemlist->listname}}</a></li>
-							@endforeach
-						</ul>
-					</div>
 					<?php 
 						$item = $index_mod->news_in_mod($index_mod->id);
 						$hot = $item->shift();								
 					 ?>
 					<div class="row">
-						<div class="hidden-xs col-md-7 nopadding">
+						<div class="hidden-xs col-md-6 nopadding">
 							<div class="content-panel-body article-list">							
 								<div class="item" data-color-top-slider="#867eef">
 									<div class="item-header">
 										<a href="{{url('chi-tiet/'.$hot['slug'])}}">
 											<span class="comment-tag"><i class="fa fa-comment-o"></i><span class="fb-comments-count" data-href="{{url('chi-tiet/'.$hot['slug'])}}"></span><i></i></span>
 											<span class="read-more-wrapper"><span class="read-more">Đọc thêm +<i></i></span></span>
-											<img src="{{url('public/img/news/300x300/'.$hot['newimg'])}}" alt="No image" />
+											<img width="300px" src="{{url('public/img/news/300x300/'.$hot['newimg'])}}" alt="No image" />
 										</a>
 									</div>
 									<div class="item-content">
@@ -64,17 +63,25 @@
 								</div>
 							</div>
 						</div>
-						<div class="hidden-xs col-md-5 nopadding">
-							<div class="content-panel-body article-list">
-								<ul>
-									@foreach($item as $news)
-									<li>
-										<a href="{{url('/chi-tiet/'.$news->slug)}}" title="{{$news->newsname}}"><b class="fa fa-angle-right" aria-hidden="true"></b> <b>{{$news->newsname}}</b> </a>
-									</li>
-									@endforeach
-								</ul>
+
+						<div class="hidden-xs col-md-6 nopadding">
+							<div class="content-panel-body article-list">							
+								<div class="item" data-color-top-slider="#867eef">
+									<div class="item-header">
+										<a href="{{url('chi-tiet/'.$hot['slug'])}}">
+											<span class="comment-tag"><i class="fa fa-comment-o"></i><span class="fb-comments-count" data-href="{{url('chi-tiet/'.$hot['slug'])}}"></span><i></i></span>
+											<span class="read-more-wrapper"><span class="read-more">Đọc thêm +<i></i></span></span>
+											<img width="300px" src="{{url('public/img/news/300x300/'.$hot['newimg'])}}" alt="No image" />
+										</a>
+									</div>
+									<div class="item-content">
+										<h3><a href="{{url('chi-tiet/'.$hot['slug'])}}">{{$hot['newsname']}}</a></h3>
+										<p>{!! $hot['newintro'] !!}</p>	
+									</div>
+								</div>
 							</div>
 						</div>
+
 						<div class="visible-xs col-xs-12">
 							<div class="mobile_hot_img">
 								<a href="{{url('/chi-tiet/'.$hot->slug)}}" title="{{$hot->newsname}}"><img class="img-responsive" src="{{url('public/img/news/300x300/'.$hot['newimg'])}}" alt="{{$hot['newimg']}}"></a>

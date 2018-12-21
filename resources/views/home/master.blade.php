@@ -64,7 +64,7 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<!-- Navbar responsive-->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="wrapper">
 					<div class="navbar-header">
@@ -73,7 +73,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>                        
 						</button>
-						<a href="{{url('')}}"><img src="{{ url('/public/logo_zing_trithuc.png')}}" alt="No logo" /></a>
+						<a href="{{url('')}}"><img width="50px" src="{{ url('/public/ps_icon.png')}}" alt="No logo" /></a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="myNavbar">
@@ -129,16 +129,10 @@
 					<!-- END .header-main -->
 					</div>
 					<nav class="main-menu">
-						<div class="ads">
-							ads
-						</div>
-						<div class="ads">
-							ads
-						</div>
+						@include('home.top_ads')
 					</nav>
 				<!-- END .wrapper -->
 				</div>
-				
 			<!-- END .header -->
 			</header>
 			
@@ -155,7 +149,7 @@
 					<!-- BEGIN .wrapper -->
 					<div class="wrapper">
 						<p>{!! $contact->slogan_intro !!}</p>					
-						<p>&copy; Copyright <strong>{{$contact->nameco}}</strong> <?php echo date("Y"); ?>, <strong><a href="https://nt7solution.com/" target="_blank">{{$contact->website}}</a></strong></p>
+						<p>&copy; Copyright <strong>{{$contact->nameco}}</strong> <?php echo date("Y"); ?>, <strong><a href="https://phungsu.vn" target="_blank">{{$contact->website}}</a></strong></p>
 					
 					<!-- END .wrapper -->
 					</div>
