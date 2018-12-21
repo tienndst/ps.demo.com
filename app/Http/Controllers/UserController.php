@@ -60,7 +60,7 @@ class UserController extends Controller
                 'username.required' => 'Vui lòng nhập email đăng nhập',
                 'nnpassword.required' => 'Vui lòng nhập mật khẩu đăng nhập',
                 'nnpassword.min' => 'Mật khẩu quá ngắn',
-                'nnpassword.max' => 'Mật khâu quá dài'
+                'nnpassword.max' => 'Mật khẩu quá dài'
             ]);
         $remember = $request->remember_me;
         if(Auth::attempt(['username'=>$request->username,'password'=>$request->nnpassword],$remember))
@@ -72,7 +72,7 @@ class UserController extends Controller
             \Session::save();
             return redirect('/admin')->with('thongbao','Đăng nhập thành công');;
         }else{
-            return redirect('auth/login')->with('thongbao','Thông tin đăng nhập sai');
+            return redirect('/login')->with('thongbao','Thông tin đăng nhập sai');
         }
     }
     public function ListUser(){

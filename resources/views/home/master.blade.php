@@ -76,8 +76,9 @@
 						<a href="{{url('')}}"><img width="50px" src="{{ url('/public/ps_icon.png')}}" alt="No logo" /></a>
 					</div>
 
+					<!-- when active change action to  url('/search') -->
 					<div class="collapse navbar-collapse" id="myNavbar">
-						<form class="navbar-form navbar-left" action="{{ url('/search') }}">
+						<form class="navbar-form navbar-left" action="{{ url('/')}}">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Tìm kiếm" name="key">
 									<div class="input-group-btn">
@@ -88,16 +89,18 @@
 							</div>
 						</form>
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="/register"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
-							<li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+							<!-- when active change href to /register and /login -->
+							<li><a href="/"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
+							<li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
 						</ul>
-						<div class="load-responsive right header-main-weather wheather">
-						<div class="weather-block">
-							<i class="wi wi-day-lightning"></i>
-							<strong>Hà Nội</strong>
-							<span>+29&deg;C, Mưa dông</span>
+						<!-- when active clear class hive to show the wheather block -->
+						<div class="hide load-responsive right header-main-weather wheather">
+							<div class="weather-block">
+								<i class="wi wi-day-lightning"></i>
+								<strong>Hà Nội</strong>
+								<span>+29&deg;C, Mưa dông</span>
+							</div>
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -129,7 +132,7 @@
 					<!-- END .header-main -->
 					</div>
 					<nav class="main-menu">
-						@include('home.top_ads')
+						<!--@include('home.top_ads') -->
 					</nav>
 				<!-- END .wrapper -->
 				</div>

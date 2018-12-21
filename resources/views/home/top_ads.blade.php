@@ -1,6 +1,6 @@
 <div class="ads">
-	ads1
+	<a href="">Quảng cáo xin liên hệ : admin@phungsu.vn</a>
 </div>
 <div class="ads">
-	ads2
+	<a href="">Quảng cáo xin liên hệ : admin@phungsu.vn</a>
 </div>

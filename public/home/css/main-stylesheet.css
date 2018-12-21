@@ -22,7 +22,7 @@ Reseting styles for individual theme
 -------------------------------------------------------------------*/
 
 body {
-	font-size: 13px;
+	font-size: 14px;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-weight: 400;
 	margin: 0;
@@ -139,6 +139,9 @@ p:last-child {
 	margin-bottom: 0px;
 }
 
+.hide{
+	display: none;
+}
 .hover-color-facebook {
 	color: #3b5998;
 }
@@ -6737,7 +6740,7 @@ div.bbp-breadcrumb {
 	margin-right: 7px;
 }
 a{
-	font-size: 12px !important;
+	font-size: 13px !important;
 	line-height: 16px;
 }
 .article-list ul li a {

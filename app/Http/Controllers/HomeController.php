@@ -815,7 +815,7 @@ class HomeController extends Controller {
 		// ================================ 
   
         $public_var = $this->public_var();
-        return view('home.register',array_merge($public_var, [ ]) );
+        return view('home.404',array_merge($public_var, [ ]) );
 	}
 
 
